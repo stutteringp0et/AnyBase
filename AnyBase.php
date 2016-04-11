@@ -24,8 +24,8 @@ class AnyBase {
     }
     function decode($n) {
         $c = 0;
-        for ($i = strlen($converted); $i; $i--) {
-            $c += strpos($this->charset, substr($converted, (-1 * ( $i - strlen($converted) )), 1)) * pow($this->base, $i - 1);
+        for ($i = strlen($n); $i; $i--) {
+            $c += strpos($this->charset, substr($n, (-1 * ( $i - strlen($n) )), 1)) * pow($this->base, $i - 1);
         }
         return $c;        
     }
